@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Ignore Maven/Gradle build output
+target/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+
