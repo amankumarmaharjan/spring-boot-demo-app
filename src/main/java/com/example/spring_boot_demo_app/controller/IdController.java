@@ -1,11 +1,9 @@
 package com.example.spring_boot_demo_app.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/ids")
@@ -16,6 +14,12 @@ public class IdController {
     //Get ids
     @GetMapping
     public ResponseEntity<List<Integer>> getIds() {
+        return ResponseEntity.ok(idList);
+    }
+
+    @GetMapping("/sort")
+    public ResponseEntity<List<Integer>> getSortedIds() {
+        Collections.sort(idList);
         return ResponseEntity.ok(idList);
     }
 
