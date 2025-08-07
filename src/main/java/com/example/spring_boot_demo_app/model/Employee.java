@@ -1,23 +1,28 @@
 package com.example.spring_boot_demo_app.model;
 
-public class Employee{
+public class Employee {
     //fields attributes
     private int id;
+
     private String name;
 
     //method
-    public void setId(int id){
-        this.id=id;
+    public void setId(int idOut) {
+        this.id = idOut;
     }
-    public int getId(){
+
+    public int getId() {
+
         return this.id;
     }
 
-    public void setName(String name){
-        this.name=name;
+    public void setName(String nameOUt) {
+
+        this.name = nameOUt;
     }
 
-    public String getName(){
+    public String getName() {
+
         return this.name;
     }
 
