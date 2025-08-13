@@ -16,11 +16,11 @@ public class HelloController {
         return "Hello, World!";
     }
 
-    @GetMapping("/id")
-    public int getId() {
-        int id = 1;
-        return id;
-    }
+//    @GetMapping("/id")
+//    public int getId() {
+//        int id = 1;
+//        return id;
+//    }
 
     @GetMapping("/id/list")
     public List<Integer> getIdList() {

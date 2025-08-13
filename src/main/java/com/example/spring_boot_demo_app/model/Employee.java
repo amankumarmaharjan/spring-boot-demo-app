@@ -6,6 +6,12 @@ public class Employee {
 
     private String name;
 
+    private String lastName;
+
+    public String getLastName() {
+        return lastName;
+    }
+
     //method
     public void setId(int idOut) {
         this.id = idOut;
