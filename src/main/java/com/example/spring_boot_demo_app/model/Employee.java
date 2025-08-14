@@ -8,6 +8,25 @@ public class Employee {
 
     private String lastName;
 
+    public Employee(int id, String arjun) {
+        this.id = id;
+        this.name = arjun;
+    }
+
+    public Employee(int id) {
+        this.id = id;
+    }
+
+    public Employee() {
+
+    }
+
+    public Employee(int id, String name, String lastName) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+    }
+
     public String getLastName() {
         return lastName;
     }
@@ -32,5 +51,8 @@ public class Employee {
         return this.name;
     }
 
-
+    @Override
+    public String toString() {
+        return "Employee{" + "id=" + id + ", name='" + name + '\'' + ", lastName='" + lastName + '\'' + '}';
+    }
 }
