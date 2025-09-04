@@ -5,25 +5,41 @@ public class AbstractClassPaymentExample3 {
         Payment payment;
         payment = new CreditCardPayment();
         payment.makePayment();
+        payment.displayPayment();
 
         payment= new CashPayment();
         payment.makePayment();
+        payment.displayPayment();
 
     }
 }
+/* abstract class= minimum 1 abstract method+ other method, no object */
+/* interface= all abstract method */
 
-abstract class Payment {
-    public abstract void makePayment();
+
+interface Payment {
+    void makePayment();
+    void displayPayment();
 }
 
-class CreditCardPayment extends Payment {
+class CreditCardPayment implements Payment {
     public void makePayment() {
         System.out.println("Credit Card Payment");
     }
+
+    @Override
+    public void displayPayment() {
+        System.out.println("Display Credit Card Payment");
+    }
 }
 
-class CashPayment extends Payment {
+class CashPayment implements Payment {
     public void makePayment() {
         System.out.println("Cash Payment");
+    }
+
+    @Override
+    public void displayPayment() {
+        System.out.println("Display Cash Payment");
     }
 }
